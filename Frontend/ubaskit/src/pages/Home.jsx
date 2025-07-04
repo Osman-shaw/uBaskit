@@ -1,14 +1,14 @@
 import { FaGooglePlay, FaApple } from 'react-icons/fa';
 import collections from "../assets/collections.jpg";
 import lady from "../assets/lady.jpg";
-import Startime from "../assets/Startime.png";
-import Dstv from "../assets/Dstv.png";
-import Orange from "../assets/Orange.jpeg";
-import Africell from "../assets/Africell.png";
-import Qcell from "../assets/Qcell.png";
-import Visa from "../assets/visa.jpeg";
-import Master from "../assets/Master.png";
-import EDSA from "../assets/EDSA.jpeg";
+import EDSALogo from '../assets/logo.EDSA.jpeg';
+import StartimeLogo from '../assets/logo.Startime.png';
+import DstvLogo from '../assets/logo.Dstv.png';
+import OrangeLogo from '../assets/logo.Orange.jpeg';
+import AfricellLogo from '../assets/logo.Africell.png';
+import QcellLogo from '../assets/logo.Qcell.png';
+import VisaLogo from '../assets/logo.visa.jpeg';
+import MasterLogo from '../assets/logo.Master.png';
 
 const Home=()=> {
 
@@ -31,17 +31,18 @@ const Home=()=> {
   ];
 
 
-   const logos = [
-    { src: {EDSA} , alt: ' EDSA' },
-    { src: {Startime}, alt: 'Startime Tv'},
-    { src: {Dstv}, alt: 'Dstv' },
-    { src: {Orange}, alt: 'Orange SL' },
-    { src: {Africell}, alt: 'Africall'},
-    { src: {Qcell}, alt: 'Qcell SL'},
-    { src: {Visa}, alt: 'Visa' },
-    { src: {Master}, alt: 'Master'},
-  ];
+ const logos = [
+  { src: EDSALogo, alt: 'EDSA' },
+  { src: StartimeLogo, alt: 'Startime TV' },
+  { src: DstvLogo, alt: 'Dstv' },
+  { src: OrangeLogo, alt: 'Orange SL' },
+  { src: AfricellLogo, alt: 'Africall' },
+  { src: QcellLogo, alt: 'Qcell SL' },
+  { src: VisaLogo, alt: 'Visa' },
+  { src: MasterLogo, alt: 'Master' },
+];
 
+   
 
 
   return (
@@ -152,7 +153,7 @@ const Home=()=> {
           Our Trusted Partners
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-          {logos.map((logo, index) => (
+           {logos.map((logo,index) => (
             <div
               key={index}
               className="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition duration-300 ease-in-out flex items-center justify-center flex-col"
@@ -166,8 +167,7 @@ const Home=()=> {
           ))}
         </div>
       </div>
-    </section>
-
+      </section>
       </div>
 
       
