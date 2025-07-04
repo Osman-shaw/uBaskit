@@ -146,7 +146,7 @@ const Home=()=> {
           </div>
         </div>
          {/* our patners */}
-         <section className="bg-pink-50 py-8 sm:py-12 lg:py-16">
+         <section className="bg-gray-50 py-8 sm:py-12 lg:py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-8 sm:mb-12">
           Our Trusted Partners
