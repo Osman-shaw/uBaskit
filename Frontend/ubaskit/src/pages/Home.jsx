@@ -32,11 +32,11 @@ const Home=()=> {
 
 
  const logos = [
-  { src: EDSALogo, alt: 'EDSA' },
+  { src: EDSALogo, alt:'EDSA' },
   { src: StartimeLogo, alt: 'Startime TV' },
-  { src: DstvLogo, alt: 'Dstv' },
-  { src: OrangeLogo, alt: 'Orange SL' },
-  { src: AfricellLogo, alt: 'Africall' },
+  { src: DstvLogo, alt:'Dstv' },
+  { src: OrangeLogo, alt:'Orange SL' },
+  { src: AfricellLogo, alt:'Africall' },
   { src: QcellLogo, alt: 'Qcell SL' },
   { src: VisaLogo, alt: 'Visa' },
   { src: MasterLogo, alt: 'Master' },
