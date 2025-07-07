@@ -1,14 +1,17 @@
 import { FaGooglePlay, FaApple } from 'react-icons/fa';
 import collections from "../assets/collections.jpg";
 import lady from "../assets/lady.jpg";
-import EDSALogo from '../assets/logo.EDSA.jpeg';
-import StartimeLogo from '../assets/logo.Startime.png';
-import DstvLogo from '../assets/logo.Dstv.png';
-import OrangeLogo from '../assets/logo.Orange.jpeg';
-import AfricellLogo from '../assets/logo.Africell.png';
-import QcellLogo from '../assets/logo.Qcell.png';
-import VisaLogo from '../assets/logo.visa.jpeg';
-import MasterLogo from '../assets/logo.Master.png';
+import Dad from "../assets/Dad.jpg";
+import smiles from "../assets/smiles.jpg";
+import EDSA from "../assets/EDSA.jpeg";
+import Startime from "../assets/Startime.png";  
+import dstv from "../assets/dstv.png";
+import Orange from "../assets/Orange.jpeg";
+import Africell from "../assets/Africell.png";
+import Qcell from "../assets/Qcell.png";
+import Visa from "../assets/Visa.jpeg";
+import Master from "../assets/Master.png";
+
 
 const Home=()=> {
 
@@ -29,17 +32,56 @@ const Home=()=> {
       description: 'New users joining annually to pay utilities and book flights.',
     },
   ];
+                      {/* Testimonials */}
 
-
- const logos = [
-  { src: EDSALogo, alt:'EDSA' },
-  { src: StartimeLogo, alt: 'Startime TV' },
-  { src: DstvLogo, alt:'Dstv' },
-  { src: OrangeLogo, alt:'Orange SL' },
-  { src: AfricellLogo, alt:'Africall' },
-  { src: QcellLogo, alt: 'Qcell SL' },
-  { src: VisaLogo, alt: 'Visa' },
-  { src: MasterLogo, alt: 'Master' },
+   const testimonials = [
+    {
+      quote: "uBaskit has made paying my electricity bills so easy and affordable!",
+      name: "Aminata Kamara",
+      title: "Customer, Sierra Leone",
+      image: lady, // Replace with actual image path
+    },
+    {
+      quote: "The airtime purchase feature is seamless best platform ever!",
+      name: "John maxwell",
+      title: "Freelancer, Nigeria",
+      image: Dad, // Replace with actual image path
+    },
+    {
+      quote: "I love how quickly I can book flight tickets.",
+      name: "Fatima Bello",
+      title: "Student, Ghana",
+      image: smiles,
+    },
+    {
+      quote: "TV subscriptions are a breeze now thank you uBaskit!",
+      name: "Kwame Mensah",
+      title: "Engineer, Ghana",
+      image: lady,
+    },
+    {
+      quote: "Affordable data bundles saved my business highly recommend!",
+      name: "Aisha Mohammed",
+      title: "Entrepreneur, Nigeria",
+      image: Dad, // Replace with actual image path
+    },
+    {
+      quote: "uBaskit’s utility payment system is reliable and fast.",
+      name: "Ibrahim Sow",
+      title: "Teacher, Sierra Leone",
+      image: Dad,
+    },
+  ];
+     {/* patners logos */}
+  const logos = [
+  { src: EDSA, alt:'EDSA' },
+  { src: Startime, alt: 'Startime TV' },
+  { src: dstv, alt:'dstv' },
+  { src: Orange, alt:'Orange SL' },
+  { src: Africell, alt:'Africall' },
+  { src: Qcell, alt: 'Qcell SL' },
+  { src: Visa, alt: 'Visa' },
+  { src: Master, alt: 'Master' },
 ];
 
    
@@ -148,26 +190,68 @@ const Home=()=> {
         </div>
          {/* our patners */}
          <section className="bg-gray-50 py-8 sm:py-12 lg:py-16">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-8 sm:mb-12">
           Our Trusted Partners
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-           {logos.map((logo,index) => (
-            <div
+            {logos.map((logo, index) => (
+                <div
+                key={index}
+                className="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-md transition duration-300 ease-in-out"
+                >
+                <img
+                    src={logo.src}
+                    alt={logo.alt}
+                    className="h-12 sm:h-16 lg:h-20 object-contain"
+                    loading="lazy"
+                />
+                </div>
+            ))}
+        </div>
+      </div>
+      </section>
+       {/* Testimonials */}
+          <section className="bg-gray-100 py-[9px] px-[23px] sm:py-12 lg:py-16 transition duration-300 ease-in-out">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
+            What Our Customers Say
+          </h2>
+          <p className="mt-3 text-base sm:text-lg text-gray-600 max-w-xl mx-auto">
+            Hear from our satisfied users about their experience with uBaskit’s utility payment services.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          {testimonials.map((testimonial, index) => (
+            <figure
               key={index}
-              className="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition duration-300 ease-in-out flex items-center justify-center flex-col"
+              className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition duration-300 ease-in-out"
             >
-              <img
-                src={logo.src}
-                alt={logo.alt}
-                className="h-16 w-auto object-contain mb-2"
-              />
-            </div>
+              <blockquote className="text-gray-700 text-sm sm:text-base mb-4">
+                <span className="text-2xl text-gray-400 mr-2">“</span>
+                {testimonial.quote}
+                <span className="text-2xl text-gray-400 ml-2">”</span>
+              </blockquote>
+              <div className="flex items-center">
+                <img
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                  className="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover mr-4"
+                />
+                <div>
+                  <figcaption className="text-gray-900 font-semibold">
+                    {testimonial.name}
+                  </figcaption>
+                  <cite className="text-gray-600 text-sm">{testimonial.title}</cite>
+                </div>
+              </div>
+            </figure>
           ))}
         </div>
       </div>
       </section>
+       
       </div>
 
       

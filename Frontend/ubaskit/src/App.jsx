@@ -1,9 +1,9 @@
 import {BrowserRouter , Routes, Route} from 'react-router-dom';
 import Navbar from  './components/Navbar'
-//import Footer from './components/Footer';
+import Footer from './components/Footer';
 import Home from './pages/Home';
-//import Login from './Auth/Login';
-//import SignUp from './Auth/SignUp';
+import Login from './Auth/Login';
+import SignUp from './Auth/SignUp';
 //import Support from './pages/support';
 //import About from './pages/About';
 //import Service from './pages/Service';
@@ -18,8 +18,11 @@ const App=()=> {
          <BrowserRouter>
           <Navbar />
            <Routes>
-           <Route path="/" element={<Home/>} />
+            <Route path="/" element={<Home/>} />
+            <Route path="/Login" element={<Login/>}/>
+            <Route path="/signUp" element={<SignUp/>}/>
           </Routes>
+          <Footer />
         </BrowserRouter>
      
     </div>
