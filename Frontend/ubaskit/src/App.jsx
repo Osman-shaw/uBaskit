@@ -6,7 +6,7 @@ import Login from './Auth/Login';
 import SignUp from './Auth/SignUp';
 import Support from './pages/support';
 import About from './pages/About';
-//import Service from './pages/Service';
+import Service from './pages/Service';
 //import Dashboard from './Dashboard/index.jsx';
 
 import './index.css'
@@ -23,7 +23,7 @@ const App=()=> {
             <Route path="/signUp" element={<SignUp/>}/>
             <Route path="/support" element={<Support/>}/>
             <Route path="/about" element={<About/>}/>
-            {/* <Route path="/service" element={<Service/>}/> */}
+             <Route path="/service" element={<Service/>}/>
             {/* <Route path="/dashboard" element={<Dashboard/>}/> */}
           </Routes>
           <Footer />
