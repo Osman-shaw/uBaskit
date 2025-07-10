@@ -7,26 +7,41 @@ import SignUp from './Auth/SignUp';
 import Support from './pages/support';
 import About from './pages/About';
 import Service from './pages/Service';
-//import Dashboard from './Dashboard/index.jsx';
+import AdminDashboard from './Dashboard/index';
 
 import './index.css'
 
+
+import PropTypes from 'prop-types';
+
 const App=()=> {
+
+
+  const MainLayout = ({ children }) => (
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <main className="flex-grow">{children}</main>
+      <Footer />
+    </div>
+  );
+
+   MainLayout.propTypes = {
+    children: PropTypes.node.isRequired,
+  };
+  
 
   return (
     <div className="main-app-container">
          <BrowserRouter>
-          <Navbar />
            <Routes>
-            <Route path="/" element={<Home/>} />
-            <Route path="/Login" element={<Login/>}/>
-            <Route path="/signUp" element={<SignUp/>}/>
-            <Route path="/support" element={<Support/>}/>
-            <Route path="/about" element={<About/>}/>
-             <Route path="/service" element={<Service/>}/>
-            {/* <Route path="/dashboard" element={<Dashboard/>}/> */}
+            <Route path="/" element={<MainLayout><Home/></MainLayout>}/> 
+            <Route path="/Login" element={<MainLayout><Login/></MainLayout>}/>
+            <Route path="/signUp" element={<MainLayout><SignUp/></MainLayout>}/>
+            <Route path="/support" element={<MainLayout><Support/></MainLayout>}/>
+            <Route path="/about" element={<MainLayout><About/></MainLayout>}/>
+             <Route path="/service" element={<MainLayout><Service/></MainLayout>}/>
+            <Route path="/admin" element={<AdminDashboard/>}/> 
           </Routes>
-          <Footer />
         </BrowserRouter>
     </div>
   )

@@ -3,7 +3,7 @@ import electricity from '../assets/electricity.png'; // Replace with electricity
 import tv from '../assets/tv.png'; // Replace with TV subscription image
 import money from '../assets/money.png'; // Replace with airtime image
 import flight from '../assets/flight.png'; // Replace with internet & mobile data image
-import Airtime from '../assets/flight.png'; // Replace with flight tickets image
+import Airtime from '../assets/Airtime.png'; // Replace with flight tickets image
 import data from '../assets/data.png'; // Replace with transaction image
 
 const Service=()=>{
@@ -97,5 +97,4 @@ const Service=()=>{
     </div>
   );
 }
-
 export default Service;

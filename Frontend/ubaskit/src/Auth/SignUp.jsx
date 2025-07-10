@@ -33,7 +33,7 @@ const SignUp=()=> {
           <img
             src={Dad}
             alt="Power Plug"
-            className="w-full h-full object-cover"
+            className="w-full h-125 object-cover"
           />
         </div>
 
