@@ -12,32 +12,32 @@ const Service=()=>{
     {
       title: 'Electricity Bills',
       image: electricity,
-      route: '/service/electricity-bills',
+      route: '/edsa',
     },
     {
       title: 'TV Subscriptions',
       image: tv,
-      route: '/service/tv-subscriptions',
+      route: '/movies',
     },
     {
       title: 'Airtime',
       image: Airtime,
-      route: '/service/airtime',
+      route: '/airtime',
     },
     {
       title: 'Internet & Mobile Data',
       image: data,
-      route: '/service/internet-mobile-data',
+      route: '/bundle',
     },
     {
       title: 'Flight Tickets',
       image: flight,
-      route: '/service/flight-tickets',
+      route: '/tickets',
     },
     {
       title: 'Transactions',
       image: money,
-      route: '/services/transactions',
+      route: '/transactions',
     },
   ];
 

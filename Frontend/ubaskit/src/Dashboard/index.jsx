@@ -8,12 +8,12 @@ const AdminDashboard=()=> {
 
   // Sample data for widgets and table
   const serviceMetrics = [
-    { title: 'Data Sales', value: '₦12.5M', icon: <FaMobileAlt className="text-indigo-900" />, route: '/admin/data' },
-    { title: 'Airtime Sales', value: '₦8.3M', icon: <FaMobileAlt className="text-indigo-900" />, route: '/admin/airtime' },
-    { title: 'TV Subscriptions', value: '₦4.2M', icon: <FaTv className="text-indigo-900" />, route: '/admin/tv' },
-    { title: 'Flight Tickets', value: '₦15.7M', icon: <FaPlane className="text-indigo-900" />, route: '/admin/flights' },
-    { title: 'Electricity Payments', value: '₦9.8M', icon: <FaBolt className="text-indigo-900" />, route: '/admin/electricity' },
-    { title: 'Transactions', value: '₦50.5M', icon: <FaMoneyBillWave className="text-indigo-900" />, route: '/admin/transactions' },
+    { title: 'Data Sales', value: '₦12.5M', icon: <FaMobileAlt className="text-indigo-900" />, route: '/bundle' },
+    { title: 'Airtime Sales', value: '₦8.3M', icon: <FaMobileAlt className="text-indigo-900" />, route: '/airtime' },
+    { title: 'TV Subscriptions', value: '₦4.2M', icon: <FaTv className="text-indigo-900" />, route: '/movies' },
+    { title: 'Flight Tickets', value: '₦15.7M', icon: <FaPlane className="text-indigo-900" />, route: '/tickets' },
+    { title: 'Electricity Payments', value: '₦9.8M', icon: <FaBolt className="text-indigo-900" />, route: '/edsa' },
+    { title: 'Transactions',value: '₦50.5M', icon: <FaMoneyBillWave className="text-indigo-900" />, route: '/transactions' },
   ];
 
   const transactions = [
@@ -37,13 +37,13 @@ const AdminDashboard=()=> {
         <nav className="mt-10 space-y-5">
           {[
             { name: 'Dashboard', icon: <FaTachometerAlt  className="text-gray-600"/>, to: '/admin' },
-            { name: 'Data', icon: <FaMobileAlt className="text-gray-600" />, to: '/admin/data' },
-            { name: 'Transactions', icon: <FaMoneyBillWave  className="text-gray-600"/>, to: '/admin/transactions' },
-            { name: 'Airtime', icon: <FaMobileAlt className="text-gray-600" />, to: '/admin/airtime' },
-            { name: 'Tv Subcription', icon: <FaTv className="text-gray-600" />, to: '/admin/tv' },
-            { name: 'Flight', icon: <FaPlane className="text-gray-600" />, to: '/admin/ticket' },
-            { name: 'Electricity', icon: <FaBolt className="text-gray-600" />, to: '/admin/electricity' },
-            { name: 'Settings', icon: <FaCog className="text-gray-600" />, to: '/admin/settings' },
+            { name: 'Data', icon: <FaMobileAlt className="text-gray-600" />, to: '/bundle' },
+            { name: 'Transactions', icon: <FaMoneyBillWave  className="text-gray-600"/>, to: '/transactions' },
+            { name: 'Airtime', icon: <FaMobileAlt className="text-gray-600" />, to: '/airtime' },
+            { name: 'Tv Subcription', icon: <FaTv className="text-gray-600" />, to: '/movies' },
+            { name: 'Flight', icon: <FaPlane className="text-gray-600" />, to: '/ticket'},
+            { name: 'Electricity', icon: <FaBolt className="text-gray-600" />, to:'/edsa' },
+            { name: 'Settings', icon: <FaCog className="text-gray-600" />, to: '/settings'},
           ].map((item) => (
             <Link
               key={item.name}

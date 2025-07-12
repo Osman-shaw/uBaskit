@@ -7,7 +7,12 @@ import SignUp from './Auth/SignUp';
 import Support from './pages/support';
 import About from './pages/About';
 import Service from './pages/Service';
+import Edsa from './pages/edsa';
+import Airtime from './pages/Airtime';
+import Bundle from './pages/Bundle';
+import Movies from './pages/Movies';
 import AdminDashboard from './Dashboard/index';
+
 
 import './index.css'
 
@@ -37,9 +42,13 @@ const App=()=> {
             <Route path="/" element={<MainLayout><Home/></MainLayout>}/> 
             <Route path="/Login" element={<MainLayout><Login/></MainLayout>}/>
             <Route path="/signUp" element={<MainLayout><SignUp/></MainLayout>}/>
+            <Route path="/bundle" element={<MainLayout><Bundle/></MainLayout>}/>
             <Route path="/support" element={<MainLayout><Support/></MainLayout>}/>
             <Route path="/about" element={<MainLayout><About/></MainLayout>}/>
              <Route path="/service" element={<MainLayout><Service/></MainLayout>}/>
+            <Route path="/movies" element={<MainLayout><Movies/></MainLayout>}/>
+            <Route path="/edsa" element={<MainLayout><Edsa/></MainLayout>}/>
+            <Route path="/airtime" element={<MainLayout><Airtime/></MainLayout>}/>
             <Route path="/admin" element={<AdminDashboard/>}/> 
           </Routes>
         </BrowserRouter>
