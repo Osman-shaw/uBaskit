@@ -11,6 +11,7 @@ import Edsa from './pages/edsa';
 import Airtime from './pages/Airtime';
 import Bundle from './pages/Bundle';
 import Movies from './pages/Movies';
+import Transaction from './pages/Transactions';
 import AdminDashboard from './Dashboard/index';
 
 
@@ -48,6 +49,7 @@ const App=()=> {
              <Route path="/service" element={<MainLayout><Service/></MainLayout>}/>
             <Route path="/movies" element={<MainLayout><Movies/></MainLayout>}/>
             <Route path="/edsa" element={<MainLayout><Edsa/></MainLayout>}/>
+            <Route path="/transactions" element={<MainLayout><Transaction/></MainLayout>}/>
             <Route path="/airtime" element={<MainLayout><Airtime/></MainLayout>}/>
             <Route path="/admin" element={<AdminDashboard/>}/> 
           </Routes>
